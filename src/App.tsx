@@ -29,7 +29,7 @@ import { parseJwt } from "utils/parse-jwt";
 import 
 { Login,
   Home,
-  Agent,
+  Agents,
   MyProfile,
   PropertyDetails,
   AllProperties,
@@ -118,31 +118,35 @@ function App() {
             {
               name: "properties",
               options : {label  : "Properties"},
-              list : MuiInferencer,
+              list : AllProperties,
+              show : PropertyDetails,
+              create : CreateProperty,
+              edit : EditProperty,
               icon : < VillaOutlined ></VillaOutlined>
             },
             {
-              name: "agent",
+              name: "agents",
               options : {label  : "Agent"},
-              list : MuiInferencer,
+              list : Agents,
+              show : AgentProfile,
               icon : <PeopleAltOutlined></PeopleAltOutlined>
             },
             {
-              name: "review",
+              name: "reviews",
               options : {label  : "Review"},
-              list : MuiInferencer,
+              list : Home,
               icon : <StarOutlineRounded></StarOutlineRounded>
             },
             {
-              name: "message",
+              name: "messages",
               options : {label  : "Message"},
-              list : MuiInferencer,
+              list : Home,
               icon : <ChatBubbleOutline></ChatBubbleOutline>
             },
             {
               name: "my_profile",
               options : {label  : "My Profile"},
-              list : MuiInferencer,
+              list : MyProfile,
               icon : <AccountCircleOutlined></AccountCircleOutlined>
             },
           ]}

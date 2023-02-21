@@ -28,6 +28,8 @@ export interface PropertyProps {
 }
 
 export interface FormProps {
+    //To remove the error of children not geting props
+    children: React.ReactNode;
     type: string,
     register: any,
     onFinish: (values: FieldValues) => Promise<void | CreateResponse<BaseRecord> | UpdateResponse<BaseRecord>>,
